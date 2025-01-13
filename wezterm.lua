@@ -31,9 +31,9 @@ local config = wezterm.config_builder()
 -- config.front_end = "WebGpu"
 
 config.front_end = "OpenGL"
-config.max_fps = 60
+config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
-config.animation_fps = 1
+config.animation_fps = 30
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
@@ -55,7 +55,7 @@ config.cell_width = 0.9
 -- config.cell_width = 0.9
 config.window_background_opacity = 0.9
 config.prefer_egl = true
-config.font_size = 16.0
+config.font_size = 14.0
 
 config.window_padding = {
   left = 0,
@@ -192,8 +192,9 @@ config.colors = {
   -- background = 'rgba(59, 34, 76, 100%)',
   cursor_border = "#bea3c7",
   -- cursor_fg = "#281733",
-  cursor_bg = "#bea3c7",
-  -- selection_fg = '#281733',
+  cursor_bg = "#87a2e8",
+  selection_fg = '#87a2e8',
+  selection_bg = '#87a2e8',
 
   tab_bar = {
     background = "#0c0b0f",
