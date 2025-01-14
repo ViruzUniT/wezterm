@@ -78,35 +78,35 @@ config.use_fancy_tab_bar = false
 --
 
 -- color scheme toggling
-wezterm.on("toggle-colorscheme", function(window, pane)
-	local overrides = window:get_config_overrides() or {}
-	if overrides.color_scheme == "Zenburn" then
-		-- overrides.color_scheme = "Cloud (terminal.sexy)"
-		overrides.color_scheme = "rose-pine-moon"
-	else
-		overrides.color_scheme = "Zenburn"
-	end
-	window:set_config_overrides(overrides)
-end)
+-- wezterm.on("toggle-colorscheme", function(window, pane)
+-- 	local overrides = window:get_config_overrides() or {}
+-- 	if overrides.color_scheme == "Zenburn" then
+-- 		-- overrides.color_scheme = "Cloud (terminal.sexy)"
+-- 		overrides.color_scheme = "rose-pine-moon"
+-- 	else
+-- 		overrides.color_scheme = "Zenburn"
+-- 	end
+-- 	window:set_config_overrides(overrides)
+-- end)
 
 -- keymaps
 config.keys = {
+	-- {
+	-- 	key = "e",
+	-- 	mods = "CTRL|SHIFT|ALT",
+	-- 	action = wezterm.action.EmitEvent("toggle-colorscheme"),
+	-- },
 	{
-		key = "e",
-		mods = "CTRL|SHIFT|ALT",
-		action = wezterm.action.EmitEvent("toggle-colorscheme"),
-	},
-	{
-		key = "h",
-		mods = "CTRL|SHIFT|ALT",
+		key = "v",
+		mods = "CTRL|ALT",
 		action = wezterm.action.SplitPane({
 			direction = "Right",
 			size = { Percent = 50 },
 		}),
 	},
 	{
-		key = "v",
-		mods = "CTRL|SHIFT|ALT",
+		key = "h",
+		mods = "CTRL|ALT",
 		action = wezterm.action.SplitPane({
 			direction = "Down",
 			size = { Percent = 50 },
