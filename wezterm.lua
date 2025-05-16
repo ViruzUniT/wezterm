@@ -3,15 +3,14 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.enable_wayland = false
-config.front_end = "WebGpu"
+config.front_end = "Software"
 config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 30
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
-config.font_dirs = { "fonts" }
-config.font = wezterm.font("Iosevka NF")
+config.font = wezterm.font("IosevkaNerdFont")
 config.cell_width = 0.9
 config.window_background_opacity = 0.6
 config.prefer_egl = true
@@ -28,25 +27,7 @@ config.window_padding = {
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 
--- color scheme toggling
--- wezterm.on("toggle-colorscheme", function(window, pane)
--- 	local overrides = window:get_config_overrides() or {}
--- 	if overrides.color_scheme == "Zenburn" then
--- 		-- overrides.color_scheme = "Cloud (terminal.sexy)"
--- 		overrides.color_scheme = "rose-pine-moon"
--- 	else
--- 		overrides.color_scheme = "Zenburn"
--- 	end
--- 	window:set_config_overrides(overrides)
--- end)
-
--- keymaps
 config.keys = {
-	-- {
-	-- 	key = "e",
-	-- 	mods = "CTRL|SHIFT|ALT",
-	-- 	action = wezterm.action.EmitEvent("toggle-colorscheme"),
-	-- },
 	{
 		key = "v",
 		mods = "CTRL|ALT",
@@ -131,16 +112,8 @@ config.keys = {
 -- config.color_scheme = "Cloud (terminal.sexy)"
 config.color_scheme = "rose-pine-moon"
 config.colors = {
-	-- background = "#3b224c",
-	-- background = "#181616", -- vague.nvim bg
-	-- background = "#080808", -- almost black
-	-- background = "#0c0b0f", -- dark purple
-	-- background = "#020202", -- dark purple
-	-- background = "#1e2326", -- everforest
-	-- background = "#17151c", -- rose pine
 	background = "#16141a",
 	cursor_border = "#bea3c7",
-	-- cursor_fg = "#281733",
 	cursor_bg = "#87a2e8",
 	selection_fg = "#87a2e8",
 	selection_bg = "#87a2e8",
@@ -165,30 +138,15 @@ config.colors = {
 		},
 
 		new_tab = {
-			-- bg_color = "rgba(59, 34, 76, 50%)",
 			bg_color = "#0c0b0f",
 			fg_color = "white",
 		},
 	},
 }
 
-config.window_frame = {
-	font = wezterm.font({ family = "Iosevka NF", weight = "Regular" }),
-	active_titlebar_bg = "#0c0b0f",
-	-- active_titlebar_bg = "#181616",
-}
-
--- config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
 config.window_decorations = "NONE | RESIZE"
--- config.default_prog = {"pwsh", "-NoLogo"}
-config.default_prog = { "bash" }
 config.initial_cols = 80
 config.underline_position = "-1px"
 config.underline_thickness = "2px"
--- config.window_background_image = "C:/dev/misc/berk.png"
--- config.window_background_image_hsb = {
--- 	brightness = 0.1,
--- }
 
--- and finally, return the configuration to wezterm
 return config
