@@ -10,7 +10,7 @@ config.animation_fps = 30
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
-config.font = wezterm.font("IosevkaNerdFont")
+config.font = wezterm.font("Iosevka NF Medium")
 config.cell_width = 0.9
 config.window_background_opacity = 0.6
 config.prefer_egl = true
@@ -46,22 +46,22 @@ config.keys = {
 	},
 	{
 		key = "H",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.AdjustPaneSize({ "Left", 5 }),
 	},
 	{
 		key = "J",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.AdjustPaneSize({ "Down", 5 }),
 	},
 	{
 		key = "K",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.AdjustPaneSize({ "Up", 5 }),
 	},
 	{
 		key = "L",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.AdjustPaneSize({ "Right", 5 }),
 	},
 	{ key = "9", mods = "CTRL", action = act.PaneSelect },
@@ -87,14 +87,84 @@ config.keys = {
 			name = "default",
 		}),
 	},
-	-- Switch to a monitoring workspace, which will have `top` launched into it
 	{
 		key = "u",
 		mods = "CTRL|SHIFT",
 		action = act.SwitchToWorkspace({
-			name = "monitoring",
+			name = "Fabian von der Hood zu nem Huracan",
 		}),
 	},
+	{
+		key = "1",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Sibille",
+		}),
+	},
+	{
+		key = "2",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Tropschuh",
+		}),
+	},
+	{
+		key = "3",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Während du Kakao trinkst kämpfen wir für dich",
+		}),
+	},
+	{
+		key = "4",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Zum Glück bist du noch bei Mioa",
+		}),
+	},
+	{
+		key = "5",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Mama guck wir können reich sein",
+		}),
+	},
+	{
+		key = "6",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Ich mach Songs für den Block keine Shishalieder",
+		}),
+	},
+	{
+		key = "7",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Bei Nacht Grabräuba",
+		}),
+	},
+	{
+		key = "8",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Ey Mom träumen ich bin Tagträumer",
+		}),
+	},
+	{
+		key = "9",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Ich will den ganzen Kuchen keine Reste",
+		}),
+	},
+	{
+		key = "0",
+		mods = "CTRL|SHIFT",
+		action = act.SwitchToWorkspace({
+			name = "Wenn die Wölfe wieder jagen auf der Straße und die Mütter weinen weißt du dass es Nacht ist",
+		}),
+	},
+	-- Switch to a monitoring workspace, which will have `top` launched into it
 	-- Create a new workspace with a random name and switch to it
 	{ key = "i", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace },
 	-- Show the launcher in fuzzy selection mode and have it list all workspaces
@@ -146,6 +216,7 @@ config.colors = {
 
 config.window_decorations = "NONE | RESIZE"
 config.initial_cols = 80
+config.default_prog = { "pwsh", "--noLogo" }
 config.underline_position = "-1px"
 config.underline_thickness = "2px"
 
