@@ -96,70 +96,70 @@ config.keys = {
 	},
 	{
 		key = "1",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Sibille",
 		}),
 	},
 	{
 		key = "2",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Tropschuh",
 		}),
 	},
 	{
 		key = "3",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Während du Kakao trinkst kämpfen wir für dich",
 		}),
 	},
 	{
 		key = "4",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Zum Glück bist du noch bei Mioa",
 		}),
 	},
 	{
 		key = "5",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Mama guck wir können reich sein",
 		}),
 	},
 	{
 		key = "6",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Ich mach Songs für den Block keine Shishalieder",
 		}),
 	},
 	{
 		key = "7",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Bei Nacht Grabräuba",
 		}),
 	},
 	{
 		key = "8",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Ey Mom träumen ich bin Tagträumer",
 		}),
 	},
 	{
 		key = "9",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Ich will den ganzen Kuchen keine Reste",
 		}),
 	},
 	{
 		key = "0",
-		mods = "CTRL|SHIFT",
+		mods = "CTRL|ALT",
 		action = act.SwitchToWorkspace({
 			name = "Wenn die Wölfe wieder jagen auf der Straße und die Mütter weinen weißt du dass es Nacht ist",
 		}),
@@ -170,7 +170,7 @@ config.keys = {
 	-- Show the launcher in fuzzy selection mode and have it list all workspaces
 	-- and allow activating one.
 	{
-		key = "9",
+		key = "ß",
 		mods = "CTRL|ALT",
 		action = act.ShowLauncherArgs({
 			flags = "FUZZY|WORKSPACES",
