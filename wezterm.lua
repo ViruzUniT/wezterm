@@ -6,13 +6,13 @@ config.enable_wayland = false
 config.front_end = "Software"
 config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
-config.animation_fps = 30
+config.animation_fps = 60
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
 config.font = wezterm.font("Iosevka NF Medium")
 config.cell_width = 0.9
-config.window_background_opacity = 0.6
+config.window_background_opacity = 0.75
 config.prefer_egl = true
 config.font_size = 14.0
 
@@ -182,7 +182,8 @@ config.keys = {
 -- config.color_scheme = "Cloud (terminal.sexy)"
 config.color_scheme = "rose-pine-moon"
 config.colors = {
-	background = "#16141a",
+	-- background = "#16141a",
+	background = "#232136",
 	cursor_border = "#bea3c7",
 	cursor_bg = "#87a2e8",
 	selection_fg = "#87a2e8",
