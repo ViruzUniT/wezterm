@@ -3,7 +3,7 @@ local act = wezterm.action
 local config = wezterm.config_builder()
 
 config.enable_wayland = false
-config.front_end = "Software"
+config.front_end = "WebGpu"
 config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 30
