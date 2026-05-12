@@ -2,6 +2,8 @@ local wezterm = require("wezterm")
 local act = wezterm.action
 local config = wezterm.config_builder()
 
+local opacity = 0.4
+
 config.enable_wayland = false
 config.front_end = "WebGpu"
 config.max_fps = 144
@@ -12,7 +14,7 @@ config.term = "xterm-256color" -- Set the terminal type
 
 config.font = wezterm.font("Iosevka NF Medium")
 config.cell_width = 0.9
-config.window_background_opacity = 0.75
+config.window_background_opacity = opacity
 config.prefer_egl = true
 config.font_size = 14.0
 
@@ -73,7 +75,7 @@ config.keys = {
 		action = wezterm.action_callback(function(window, _)
 			local overrides = window:get_config_overrides() or {}
 			if overrides.window_background_opacity == 1.0 then
-				overrides.window_background_opacity = 0.85
+				overrides.window_background_opacity = opacity
 			else
 				overrides.window_background_opacity = 1.0
 			end
