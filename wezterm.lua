@@ -8,11 +8,11 @@ config.enable_wayland = false
 config.front_end = "WebGpu"
 config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
-config.animation_fps = 60
+config.animation_fps = 144
 config.cursor_blink_rate = 500
 config.term = "xterm-256color" -- Set the terminal type
 
-config.font = wezterm.font("Iosevka NF Medium")
+config.font = wezterm.font("CodeNewRoman Nerd Font")
 config.cell_width = 0.9
 config.window_background_opacity = opacity
 config.prefer_egl = true
@@ -182,10 +182,13 @@ config.keys = {
 
 -- For example, changing the color scheme:
 -- config.color_scheme = "Cloud (terminal.sexy)"
-config.color_scheme = "rose-pine-moon"
+-- config.color_scheme = "rose-pine-moon"
+-- config.color_scheme = "Atelier Estuary (base16)"
+-- config.color_scheme = "Darktooth (base16)"
+config.color_scheme = "Gruvbox Material (Gogh)"
 config.colors = {
 	-- background = "#16141a",
-	background = "#232136",
+	-- background = "#232136",
 	cursor_border = "#bea3c7",
 	cursor_bg = "#87a2e8",
 	selection_fg = "#87a2e8",
